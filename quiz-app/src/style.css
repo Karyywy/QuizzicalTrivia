@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Playpen+Sans:wght@300;400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background: #0c0f0a;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+main{
+  background-color: #0a100d;
+  box-shadow: 15px 8px 6px 6px black;
+  margin: 8em 8em;
+  min-width: 22em;
+  min-height: 25em;
+  border: #252422;
+  border-radius: 2em;
+}
+
+.home-card{
+  color: #edf2f4;
+  text-align: center;
+  padding: .5rem .5rem;
+}
+
+.home-title{
+  font-family: Agbalumo;
+  font-size: 2.5em;
+}
+
+/* .start-btn{
+  border: 2px solid #0077b6;
+  border-radius: 5px;
+  background: #00b4d8;
+  color: #edf2f4;
+  font-weight: 700;
+  font-size: 1em;
+  margin: 1rem 11rem;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 1.5s;
+  cursor: pointer;
+} */
+
+
+
