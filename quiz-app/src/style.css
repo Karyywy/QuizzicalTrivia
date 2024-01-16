@@ -1,5 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Playpen+Sans:wght@300;400;500;700&display=swap');
+@keyframes light {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+  30% { 
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  40% { 
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  }
+
 
 * {
   box-sizing: border-box;
@@ -15,7 +62,7 @@ main{
   background-color: #0a100d;
   box-shadow: 15px 8px 6px 6px black;
   margin: 8em 8em;
-  min-width: 22em;
+  min-width: 18em;
   min-height: 25em;
   border: #252422;
   border-radius: 2em;
@@ -30,22 +77,99 @@ main{
 .home-title{
   font-family: Agbalumo;
   font-size: 2.5em;
+  animation: light 5s 750ms linear infinite;
 }
 
-/* .start-btn{
+.start-btn{
   border: 2px solid #0077b6;
   border-radius: 5px;
-  background: #00b4d8;
+  background: #457b9d;
   color: #edf2f4;
   font-weight: 700;
-  font-size: 1em;
-  margin: 1rem 11rem;
-  padding: 1rem 2.5rem;
-  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 3em;
+  padding: .8rem 2rem;
   position: relative;
-  transition: all 1.5s;
   cursor: pointer;
-} */
+} 
+
+.start-btn:hover{
+  background-image: linear-gradient(95.9deg, #03045e 0.5%, #0077b6 19%, #00b4d8 50%, #caf0f8 100%);
+}
 
 
+.start-btn:active {
+  background-color: var(#0077b6);
+  border-color: var(#0077b6);
+}
 
+.start-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(61, 176, 228, 0.4);
+}
+
+.nav-bar,.instrction {
+  list-style-type: none;
+}
+
+.nav-bar{
+  display: flex;
+  justify-content: center;
+  margin: 2rem 2.5rem;
+  margin-left: 0;
+}
+
+.selection-item{
+  border: 1px solid#edf2f4;
+  padding: .2rem .5rem .3rem .5rem;
+}
+
+.selection-item:hover{
+  background-color: #00b4d8;
+}
+
+.instrction-card{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(33,37,41,1) 0%, rgba(52,58,64,1) 100%);
+}
+
+.instruction-inner{
+  background: radial-gradient(circle, rgba(1,42,74,1) 0%, rgba(148,187,233,1) 100%);
+  margin: 2rem 8rem;
+  padding: .3rem 2rem;
+  display: grid;  
+  justify-content: center;
+}
+
+.instrction-title{
+  text-align: center;
+  margin-bottom: .2rem;
+}
+
+.instruction-content, .instrction{
+  font-size: 1.1rem;
+  color: #edf2f4;
+  text-align: start;  
+}
+
+.instruction-content{
+  margin: 1rem auto;
+}
+
+.content-bold{
+  font-weight: 700;
+}
+
+.instrction{
+  margin-top: .1rem;
+  font-weight: 700;
+}
+
+.close-btn{
+  margin: .5rem auto;
+  padding: .1rem .3rem;
+}
