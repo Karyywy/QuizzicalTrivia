@@ -8,7 +8,7 @@ export default function FeatureConrol(props){
             <nav className='control-inner'>
                 <ul className='control-lists'>
                 <li className='control-item'>
-                <FontAwesomeIcon icon= {faSun} style={{color: "#edf2f4"}}  onClick={props.toggleLightMode}/>
+                <FontAwesomeIcon icon= {faSun} style={{color: "#edf2f4"}} />
                  {" "}Light
                 </li>
                 <li className='control-item'>

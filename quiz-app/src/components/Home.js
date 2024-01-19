@@ -17,7 +17,11 @@ export default function Home(){
 
     const[buttonInstruction, setButtonInstruction] =useState(false);
     const[dotsControl, setDotsControl] =useState(false);
+    // const[lightMode, setLightMode] = useState(true);
 
+    // function toggleLightMode(){
+    //     setLightMode(prevMode => !prevMode)
+    // }
 
     return(
     <main>

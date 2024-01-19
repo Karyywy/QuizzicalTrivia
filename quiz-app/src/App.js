@@ -1,19 +1,12 @@
 import React from "react"
 import Home from "./components/Home"
 
-export default function App() {
-  const [lightMode, setLightMode] = React.useState(false)
 
-  function toggleLightMode() {
-    setLightMode(prevMode => !prevMode)
-  }
+export default function App() {
 
   return (
       <div>
-          <Home 
-          lightMode={lightMode}
-          toggleLightMode={toggleLightMode}
-          />
+          <Home />
       </div>
   )
 }
