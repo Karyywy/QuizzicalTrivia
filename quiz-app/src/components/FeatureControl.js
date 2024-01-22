@@ -21,8 +21,8 @@ export default function FeatureConrol(props){
                 </li>
                 </ul>
                 <div className='control-close' onClick={() => props.setTrigger(false)}><FontAwesomeIcon icon={faEllipsis} style={{color: "#6bffee",}} /></div>
+                {props.children}
             </nav>
-            {props.children}
         </div>
     ): ""; 
 }

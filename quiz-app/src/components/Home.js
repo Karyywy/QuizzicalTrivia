@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestion, faGear, faDownload, faShareFromSquare} from '@fortawesome/free-solid-svg-icons'
 import Instruction from './Instruction';
 import FeatureConrol from './FeatureControl';
+import Share from './Share';
 
 export default function Home(){
     const [buttonText, setButtonText] = useState("Start Game");
@@ -17,6 +18,7 @@ export default function Home(){
 
     const[buttonInstruction, setButtonInstruction] =useState(false);
     const[dotsControl, setDotsControl] =useState(false);
+    const[buttonShare, setButtonShare] =useState(false);
     // const[lightMode, setLightMode] = useState(true);
 
     // function toggleLightMode(){
@@ -44,8 +46,10 @@ export default function Home(){
             </FeatureConrol>
 
             <li className='selection-item'>
-            <FontAwesomeIcon icon={faShareFromSquare} style={{color: "#edf2f4",}} />
+            <FontAwesomeIcon icon={faShareFromSquare} style={{color: "#edf2f4",}} onClick={() => setButtonShare(true)}/>
             </li>
+            
+            <Share trigger={buttonShare} setTrigger={setButtonShare}></Share>
 
             <li className='selection-item'>
             <FontAwesomeIcon icon={faDownload} style={{color: "#edf2f4",}}/>
