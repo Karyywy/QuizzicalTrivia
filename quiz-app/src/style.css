@@ -219,12 +219,13 @@ main{
 }
 
 .share-page{
-  position: absolute;
+  position: fixed;
   top: 34%;
-  left: 20%;
+  left: auto;
   width: 60vw;
-  height: 50vh; 
+  height: 40vh; 
   background-color: rgba(0, 0, 0, .60);
+  border-radius: 1.5rem;
 }
 
 .share-nav{
@@ -246,11 +247,13 @@ main{
 
 .share-button-container{
   display: flex;
+  align-items: center;
   justify-content: center;
   margin: 2.5rem;
 }
 
 .share-button{
+  display: grid;
   margin: 1rem;
 }
 

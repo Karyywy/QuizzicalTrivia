@@ -29,7 +29,7 @@ export default function Home(){
     <main>
     <div className='home-card'>
         <h1 className='home-title'>MASTER MIND</h1>
-        <button className='start-btn' onClick={handleClick} src='../public/sounds/click.wav'>{buttonText}</button>
+        <button className='start-btn' onClick={handleClick} >{buttonText}</button>
         <ul className='nav-bar'>
             <li className='selection-item'> 
             <FontAwesomeIcon icon={faQuestion}  style={{color: "#edf2f4",}} onClick={() => setButtonInstruction(true)} /> 

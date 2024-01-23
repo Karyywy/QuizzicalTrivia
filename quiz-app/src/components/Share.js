@@ -18,8 +18,9 @@ export default function FeatureConrol(props){
         <WhatsappShareButton url={sharePageUrl}
         title = 'MASTER MIND'
         >
-            <WhatsappIcon className='app-circle'/> WhatsApp
-        </WhatsappShareButton>
+            <WhatsappIcon className='app-circle'/>
+         </WhatsappShareButton>
+         WhatsApp
         </li>
 
         <li className='share-button'>
@@ -27,16 +28,18 @@ export default function FeatureConrol(props){
         title = 'MASTER MIND'
         quote='Please Share This Post'
         >
-            <FacebookIcon className='app-circle'/> Facebook
+            <FacebookIcon className='app-circle'/> 
         </FacebookShareButton>
+        Facebook
         </li>
 
         <li className='share-button'>
         <TwitterShareButton  url={sharePageUrl}
         title = 'MASTER MIND'
         >
-            <TwitterIcon className='app-circle'/> X
+            <TwitterIcon className='app-circle'/> 
         </TwitterShareButton>
+        X
         </li>
 
         <li className='share-button'>
@@ -44,8 +47,9 @@ export default function FeatureConrol(props){
         title = 'MASTER MIND'
         summary='Master Mind will randomly assign 10 questions in order to let the player learn anything in anywhere!'
         >
-            <LinkedinIcon className='app-circle'/> Linkedin
+            <LinkedinIcon className='app-circle'/>
         </LinkedinShareButton>
+        Linkedin
         </li>
 
         </ul>
