@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestion, faGear, faDownload, faShareFromSquare} from '@fortawesome/free-solid-svg-icons'
-import Instruction from './Instruction';
-import FeatureConrol from './FeatureControl';
-import Share from './Share';
-import Difficulty from './Difficulty';
+import Instruction from '../components/Instruction';
+import FeatureConrol from '../components/FeatureControl';
+import Share from '../components/Share';
+import Difficulty from './Setting';
 
 
 export default function Home(){

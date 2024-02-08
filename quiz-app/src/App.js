@@ -1,6 +1,6 @@
 import React from "react"
-import Home from "./components/Home"
-import Difficulty from "./components/Difficulty"
+import Home from "./pages/Home"
+import Difficulty from "./pages/Setting"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 
