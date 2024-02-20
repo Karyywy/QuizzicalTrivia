@@ -63,7 +63,7 @@ export default function Setting() {
         </div>
       {error && (
         <p className='error'>
-          Sorry, we could not generate questions, please try another option 😭
+          ***Sorry, we could not generate questions, please try another option 😭***
         </p>
       )}
       <button

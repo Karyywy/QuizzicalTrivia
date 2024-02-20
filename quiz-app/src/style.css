@@ -292,24 +292,33 @@ main{
 }
 
 .mb-3{
-  margin: 1.1rem;
+  margin: .8rem;
   display: grid;
 }
 
 .noOfQuestions, .category, .difficulty{
-  font-size: 1.1rem;
-  color: #edf2f4;
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #b8d0eb;
 }
 
 .form-select, .form-control{
+  background: linear-gradient(90deg, rgba(163,196,243,1) 39%, rgba(144,219,244,1) 48%, rgba(202,240,248,1) 62%);
+  color: #184e77;
+  font-weight: 700;
+  border: none;
+  border-radius: .5rem;
   display: grid;
   margin: auto;
   margin-top: .5rem;
-  height: 25px;
+  padding: .4rem;
+  height: 28px;
+  cursor: pointer;
 }
 
 .error{
   color: #d62828;
+  font-weight: 700;
   text-transform: capitalize;
   margin: 1rem;
   padding: .4rem;
