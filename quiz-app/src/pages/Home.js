@@ -5,7 +5,7 @@ import { faQuestion, faGear, faDownload, faShareFromSquare} from '@fortawesome/f
 import Instruction from '../components/Instruction';
 import FeatureConrol from '../components/FeatureControl';
 import Share from '../components/Share';
-import Difficulty from './Setting';
+
 
 
 export default function Home(){
@@ -26,7 +26,7 @@ export default function Home(){
     <main>
     <div className='home-card'>
         <h1 className='home-title'>MASTER MIND</h1>
-        <Link to="/Difficulty" className='start-btn'></Link>
+        <Link to="/Setting" className='start-btn'></Link>
        
         <ul className='nav-bar'>
             <li className='selection-item'> 

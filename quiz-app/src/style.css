@@ -85,7 +85,7 @@ main{
   cursor: pointer;
 }
 
-.start-btn{
+.start-btn,.start-qs-btn{
   display: inline-block;
   border: 2px solid #0077b6;
   border-radius: .5rem;
@@ -289,4 +289,60 @@ main{
 
 .app-circle{
   border-radius: 2rem;
+}
+
+.mb-3{
+  margin: 1.1rem;
+  display: grid;
+}
+
+.noOfQuestions, .category, .difficulty{
+  font-size: 1.1rem;
+  color: #edf2f4;
+}
+
+.form-select, .form-control{
+  display: grid;
+  margin: auto;
+  margin-top: .5rem;
+  height: 25px;
+}
+
+.error{
+  color: #d62828;
+  text-transform: capitalize;
+  margin: 1rem;
+  padding: .4rem;
+}
+
+.start-qs-btn{
+  color: #edf2f4;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin: 1rem;
+}
+
+.start-qs-btn:hover{
+  color:#457b9d;
+  background: #edf2f4;
+  animation: animate 0.3s;
+}
+
+@keyframes animate{
+  0%{
+    transform: rotate(0deg) translateX(0px);
+  }
+  25%{
+    transform: rotate(-20deg) translateX(-10px);
+  }
+  50%{
+    transform: rotate(0deg) translateX(0px);
+  }
+  75%{
+    transform: rotate(20deg) translateX(10px);
+  }
+  100%{
+    transform: rotate(0deg) translateX(0px);
+  }
 }

@@ -1,32 +1,80 @@
-// import React from "react";
-import { Button } from "@mui/material";
-import { Box } from "@mui/system";
-import SelectField from "../components/selectField"
+import React from 'react';
+import { useGlobalContext } from '../context';
+ 
+export default function Setting() {
+   const { quiz, handleChange, handleSubmit, error} = useGlobalContext();
 
-
-export default function Difficulty() {
-    const Setting = () => {
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    }
-
-    return(
+  return(
     <main>
     <div className='home-card'>
         <div className="difficulty-setting">
             <h1 className='home-title'>MASTER MIND</h1>
-
-            <form onSubmit={handleSubmit}>
-                <SelectField label="Category"></SelectField>
-                <SelectField label="Difficulty"></SelectField>
-                <SelectField label="Type"></SelectField>
-            </form>
-
+      </div>
+      <form className='selectionofquiz'>
+        <div className="mb-3">
+          <label for="noOfQuestions" className='noOfQuestions'>Number of Questions</label>
+          <input
+            type='number'
+            name='amount'
+            className='form-control'
+            value={quiz.amount}
+            onChange={handleChange}
+            min={5}
+            max={20}
+            style={{width:"250px"}}
+          />
         </div>
-      
+
+        <div className="mb-3">
+          <label for="category" className='category'>Category</label>
+          <select
+            className='form-select'
+            name='category'
+            id='category'
+            value={quiz.category}
+            onChange={handleChange}
+            style={{width:"250px"}}
+          >
+          <option value="GeneralKnowledge">General Knowledge</option>
+          <option value="Film">Film</option>
+          <option value="VideoGame">Video Game</option>
+          <option value="ScienceComputer">Science:Computer</option>
+          <option value="Mythology">Mythology</option>
+          <option value="Sport">Sport</option>
+          <option value="History">History</option>
+          <option value="JapaneseAnimeManga">Japanese Anime & Manga</option>
+        </select>
+        </div>
+
+        <div className="mb-3">
+          <label for="difficulty" className='difficulty'>Difficulty</label>
+          <select
+            className='form-select'
+            name='difficulty'
+            id='difficulty'
+            value={quiz.difficulty}
+            onChange={handleChange}
+            style={{width:"250px"}}
+          >
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+          </select>
+        </div>
+      {error && (
+        <p className='error'>
+          Sorry, we could not generate questions, please try another option 😭
+        </p>
+      )}
+      <button
+      type='submit'
+      onClick={handleSubmit}
+      className='start-qs-btn'
+      >
+        Go!
+      </button>
+      </form>
     </div>
     </main>
-    )
-    }
+  );
 }
-

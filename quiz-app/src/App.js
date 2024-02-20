@@ -1,7 +1,7 @@
 import React from "react"
 import Home from "./pages/Home"
-import Difficulty from "./pages/Setting"
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Setting from "./pages/Setting"
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/difficulty' element={<Difficulty />} />
+        <Route path='/Setting' element={<Setting />} />
       </Routes>
     </Router>
   );
