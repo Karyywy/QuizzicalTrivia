@@ -1,5 +1,6 @@
 import React from 'react';
-import { useGlobalContext } from '../context';
+import { Link } from "react-router-dom";
+import { useGlobalContext } from '../components/context';
  
 export default function Setting() {
    const { quiz, handleChange, handleSubmit, error} = useGlobalContext();
@@ -66,13 +67,14 @@ export default function Setting() {
           ***Sorry, we could not generate questions, please try another option 😭***
         </p>
       )}
-      <button
+      {/* <button
       type='submit'
       onClick={handleSubmit}
       className='start-qs-btn'
       >
         Go!
-      </button>
+      </button> */}
+      <Link to="/QuizForm" onClick={handleSubmit} className='start-qs-btn'>Go!</Link>
       </form>
     </div>
     </main>

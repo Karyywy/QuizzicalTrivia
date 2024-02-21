@@ -330,6 +330,7 @@ main{
   font-size: 1.1rem;
   text-transform: uppercase;
   margin: 1rem;
+  padding: .5rem;
 }
 
 .start-qs-btn:hover{
