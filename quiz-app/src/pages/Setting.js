@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { useGlobalContext } from '../components/context';
+import { useGlobalContext } from '../components/Context';
  
 export default function Setting() {
    const { quiz, handleChange, handleSubmit, error} = useGlobalContext();
@@ -13,7 +13,7 @@ export default function Setting() {
       </div>
       <form className='selectionofquiz'>
         <div className="mb-3">
-          <label for="noOfQuestions" className='noOfQuestions'>Number of Questions</label>
+          <label htmlFor="noOfQuestions" className='noOfQuestions'>Number of Questions (between 5 and 20)</label>
           <input
             type='number'
             name='amount'
@@ -27,7 +27,7 @@ export default function Setting() {
         </div>
 
         <div className="mb-3">
-          <label for="category" className='category'>Category</label>
+          <label htmlFor="category" className='category'>Category</label>
           <select
             className='form-select'
             name='category'
@@ -48,7 +48,7 @@ export default function Setting() {
         </div>
 
         <div className="mb-3">
-          <label for="difficulty" className='difficulty'>Difficulty</label>
+          <label htmlFor="difficulty" className='difficulty'>Difficulty</label>
           <select
             className='form-select'
             name='difficulty'
@@ -74,7 +74,7 @@ export default function Setting() {
       >
         Go!
       </button> */}
-      <Link to="/QuizForm" onClick={handleSubmit} className='start-qs-btn'>Go!</Link>
+      <Link to="/QuizForm" type="submit" onClick={handleSubmit} className='start-qs-btn'>Go!</Link>
       </form>
     </div>
     </main>

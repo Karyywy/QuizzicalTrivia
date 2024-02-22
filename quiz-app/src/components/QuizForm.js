@@ -1,6 +1,6 @@
 import React from 'react';
-import Setting from './Setting';
-import { useGlobalContext } from '../components/context';
+import Setting from '../pages/Setting';
+import { useGlobalContext } from './Context';
 
 export default function QuizForm() {
 const {
@@ -30,6 +30,7 @@ const {
     answers.push(answers[tempIndex]);
     answers[tempIndex] =correct_answer
   }
+  
   return(
     <main>
         <section className='quiz'>
@@ -64,3 +65,4 @@ const {
   )
 
 };
+

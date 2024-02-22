@@ -12,7 +12,7 @@ const table = {
   JapaneseAnimeManga: 31
 };
 
-const API_ENDPOINT = "https://opentdb.com/api.php?";
+const AsiosUrl = "https://opentdb.com/api.php?";
 
 const AppContext = React.createContext();
 
@@ -24,16 +24,16 @@ const AppProvider = ({ children }) => {
   const [correct, setCorrect] = useState(0);
   const [error, setError] = useState(false);
   const [quiz, setQuiz] = useState({
-    amount: 10,
-    category: "sports",
-    difficulty: "easy",
+    amount: 5,
+    category: "General Knowledge",
+    difficulty: "Easy",
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const fetchQuestions = async (url) => {
     setLoading(true);
     setWaiting(false);
-    const response = await axios(url).catch((err) => console.log(err));
+    const response = await axios.post(url).catch((error) => console.log(error));
     if (response) {
       const data = response.data.results;
       if (data.length > 0) {
@@ -89,7 +89,7 @@ const AppProvider = ({ children }) => {
     e.preventDefault();
     const { amount, category, difficulty } = quiz;
 
-    const url = `${API_ENDPOINT}amount=${amount}&difficulty=${difficulty}&category=${table[category]}&type=multiple`;
+    const url = `${AsiosUrl}amount=${amount}&difficulty=${difficulty}&category=${table[category]}&type=multiple`;
     fetchQuestions(url);
   };
 
