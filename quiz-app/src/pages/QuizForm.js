@@ -1,6 +1,6 @@
 import React from 'react';
-import Setting from '../pages/Setting';
-import { useGlobalContext } from './Context';
+import Setting from './Setting';
+import { useGlobalContext } from '../Context';
 
 export default function QuizForm() {
 const {
@@ -36,7 +36,7 @@ const {
         <section className='quiz'>
             <p>Correct Answer: {correct}/{index}</p>
             <article className='quiz-container'>
-                <h2 dangerouslySetInnerHTML={{_html:question}}></h2>
+                <h2 dangerouslySetInnerHTML={{__html:question}}></h2>
                 <div>
                     {answers.map((answer, index) => {
                         return (

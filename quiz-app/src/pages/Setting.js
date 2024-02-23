@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { useGlobalContext } from '../components/Context';
+import { useGlobalContext } from '../Context';
  
 export default function Setting() {
    const { quiz, handleChange, handleSubmit, error} = useGlobalContext();
