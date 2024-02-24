@@ -24,8 +24,10 @@ export default function Home(){
 
     return(
     <main>
-    <div className='home-card'>
-        <h1 className='home-title'>MASTER MIND</h1>
+        <div className='home-card'>
+          <div className="home-setting">
+          <h1 className='home-title'>MASTER MIND</h1>
+          </div>
         <Link to="/Setting" className='start-btn'></Link>
        
         <ul className='nav-bar'>
@@ -53,7 +55,7 @@ export default function Home(){
             <FontAwesomeIcon icon={faDownload} style={{color: "#edf2f4",}}/>
             </li>
         </ul>
-    </div>
+        </div>
     </main>
     )
 

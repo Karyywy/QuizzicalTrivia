@@ -81,6 +81,7 @@ main{
   margin-bottom: 3.2em;
 }
 
+
 .start-btn,.selection-item, .control-item, .control-close{
   cursor: pointer;
 }
@@ -304,7 +305,7 @@ main{
 
 .form-select, .form-control{
   background: linear-gradient(90deg, rgba(163,196,243,1) 39%, rgba(144,219,244,1) 48%, rgba(202,240,248,1) 62%);
-  color: #184e77;
+  color: #6c757d;
   font-weight: 700;
   border: none;
   border-radius: .5rem;
@@ -317,12 +318,15 @@ main{
 }
 
 .error{
-  color: #d62828;
+  color: #edf2f4;
+  background: #d62828;
   font-weight: 700;
+  width: 65%;
   text-transform: capitalize;
-  margin: 1rem;
+  margin: 1rem auto;
   padding: .4rem;
-}
+  border-radius: .2rem;
+} 
 
 .start-qs-btn{
   color: #edf2f4;
