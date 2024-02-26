@@ -15,19 +15,28 @@ export default function App() {
 
   const fetchQuestions = async (amount ="", category = "", difficulty = "") => {
     const { data } = await axios.get(
-      `https://opentdb.com/api.php?amount=10${
+      `https://opentdb.com/api.php?${amount && `&amount=${amount}`}${
         category && `&category=${category}`
       }${difficulty && `&difficulty=${difficulty}`}&type=multiple`
     );
 
+    setQuestions(data.results);
     }
 
   return (
       <BrowserRouter>
         <Routes>
           <Route path={"/"} element={<Home/>}></Route>
-          <Route path={"/Setting"} element={<Setting fetchQuestions={fetchQuestions}/>}></Route>
-          <Route path={"/QuizForm"} element={<QuizForm/>}></Route>
+          <Route path={"/Setting"} 
+          element={<Setting fetchQuestions={fetchQuestions}/>}>
+          </Route>
+          <Route path={"/QuizForm"} 
+          element={<QuizForm
+            questions = {questions}
+            score = {score}
+            setScore = {setScore}
+            setQuestions = {setQuestions}
+          />}></Route>
         </Routes>
     </BrowserRouter>
   
