@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import Categories, {} from '../data/Categories'
+import Categories from '../data/Categories'
 // import { Link } from "react-router-dom";
 // import { useGlobalContext } from '../Context';
  
-export default function Setting(fetchQuestions) {
+export default function Setting({fetchQuestions}) {
   // const { url, quiz, handleChange, handleSubmit, error} = useGlobalContext();
   const [amount, setAmount] = useState('')
   const [category, setCategory] = useState('');

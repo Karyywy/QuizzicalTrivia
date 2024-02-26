@@ -1,4 +1,5 @@
-// import axios from "axios";
+import axios from "axios";
+import { useState } from "react"
 import React from "react"
 import Home from "./pages/Home"
 import Setting from "./pages/Setting"
@@ -8,7 +9,18 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 
 export default function App() {
-  const fetchQuestions = () => {}
+  const [questions, setQuestions] = useState();
+  const [score, setScore] = useState(0);
+
+
+  const fetchQuestions = async (amount ="", category = "", difficulty = "") => {
+    const { data } = await axios.get(
+      `https://opentdb.com/api.php?amount=10${
+        category && `&category=${category}`
+      }${difficulty && `&difficulty=${difficulty}`}&type=multiple`
+    );
+
+    }
 
   return (
       <BrowserRouter>
